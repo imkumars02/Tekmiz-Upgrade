@@ -1,0 +1,64 @@
+.ViewAssignment {
+  padding: 2rem;
+  .AssignmentBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    .box {
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      overflow-x: hidden;
+      .BtnDiv{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+      .flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        i {
+          font-size: 1.5rem;
+          color: var(--main-color);
+          margin-right: 0.3rem;
+          margin-top: 0.3rem;
+        }
+        span {
+          color: var(--light-color);
+          font-size: 1.7rem;
+        }
+      }
+      .question {
+        color: var(--red);
+        margin-bottom: 1rem;
+        font-weight: 400;
+        font-size: 2rem;
+        span {
+          font-weight: bold;
+        }
+      }
+      .Options {
+        display: flex;
+        flex-direction: column;
+        .optionBox {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .answer{
+        h2{
+            font-size: 1.5rem;
+            color: var(--main-color);
+            margin: 1rem 0rem;
+        }
+      }
+    }
+  }
+}

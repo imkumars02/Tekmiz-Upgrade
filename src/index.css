@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --orange:#f39c12;
+   --white:#fff;
+   --black:#2c3e50;
+   --light-color:#888;
+   --light-bg:#eee;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--main-color);
+   color: #fff;
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: .8rem;
+   border-radius: .5rem;
+   
+}
+
+*::-webkit-scrollbar-track{
+   border-radius: .5rem;
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   border-radius: .5rem;
+   background-color: var(--main-color);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background-color: var(--light-bg);
+   padding-left:28rem;
+   width:100%;
+   min-height:100vh;
+}
+
+body.dark{
+   --white:#222;
+   --black:#fff;
+   --light-color:#aaa;
+   --light-bg:#333;
+   --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active{
+   padding-left: 0;
+}
+
+section{
+   padding:2rem;
+   width:100%;
+   margin: 0 auto;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   border-radius: .5rem;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   color: #fff;
+   margin-top: 1rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn,
+.option-btn,
+.delete-btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color: var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.flex-btn{
+   display:flex;
+   gap: 1rem;
+}
+
+.message{
+   position: sticky;
+   top:0;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   justify-content: space-between;
+}
+
+.message.form{
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: var(--white);
+   top: 2rem;
+   border-radius: .5rem;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--red);
+   cursor: pointer;
+   transition: .2s linear;
+}
+
+.message i:hover{
+   transform: rotate(90deg);
+}
+
+.empty{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 1.5rem;
+   text-align: center;
+   width: 100%;
+   font-size: 2rem;
+   color: var(--red);
+}

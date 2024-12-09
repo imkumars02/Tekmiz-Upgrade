@@ -1,0 +1,295 @@
+// Variables
+$primary-color: #4caf50;
+$secondary-color: #2196f3;
+$danger-color: #f44336;
+$background-color: #f5f7fa;
+$text-color: #333;
+$light-gray: #e0e0e0;
+$white: #ffffff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+// Quiz page
+.quiz-page {
+  @include flex-center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $background-color 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.quiz-container {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+// Question container
+.question-container {
+  position: relative;
+}
+
+// Progress bar
+.progress-bar {
+  height: 6px;
+  background-color: $light-gray;
+  border-radius: 3px;
+  margin-bottom: 20px;
+
+  .progress {
+    height: 100%;
+    background-color: $primary-color;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+}
+
+// Timer
+.timer-wrapper {
+  @include flex-center;
+  margin-bottom: 20px;
+}
+
+.timer-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  @include flex-center;
+}
+
+.timer-icon {
+  position: absolute;
+  font-size: 24px;
+  color: $danger-color;
+  z-index: 2;
+}
+
+.timer-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-circle {
+  fill: none;
+  stroke: $danger-color;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: $text-color;
+}
+
+// Question
+h2 {
+  font-size: 24px;
+  color: $text-color;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+// Options
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.option-button {
+  background-color: $light-gray;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  color: $text-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($light-gray, 10%);
+  }
+
+  &.selected {
+    background-color: $secondary-color;
+    color: $white;
+  }
+}
+
+// Navigation
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-button {
+  @include button-style;
+  background-color: $primary-color;
+  color: $white;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:disabled {
+    background-color: $light-gray;
+    cursor: not-allowed;
+  }
+
+  &.prev {
+    background-color: $danger-color;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+
+  svg {
+    margin: 0 5px;
+  }
+}
+
+// Results container
+.results-container {
+  text-align: center;
+
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    @include flex-center;
+    // flex-direction: column;
+    margin: 0 auto 30px;
+    color: $white;
+
+    .score {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .total {
+      font-size: 24px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .restart-button {
+    @include button-style;
+    background-color: $secondary-color;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Error and loading messages
+.error-message,
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  color: $text-color;
+  margin-top: 50px;
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .option-button {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .results-container {
+    .score-circle {
+      width: 120px;
+      height: 120px;
+
+      .score {
+        font-size: 36px;
+      }
+
+      .total {
+        font-size: 18px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.question-container,
+.results-container {
+  animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,66 @@
+.meeting-room {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.video-container {
+  flex-grow: 1;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.chat-container,
+.waiting-room {
+  position: absolute;
+  top: 0;
+  width: 20rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.controls {
+  padding: 1rem;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chat {
+  padding: 1rem;
+  .chat-input {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+
+.admit-participant {
+  padding: 1rem;
+  .participant {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    .deny {
+      background: red;
+      color: white;
+    }
+  }
+}
+
+
+
+.recording {
+  color: red;
+}
+
+.leave {
+  background: red;
+  color: white;
+}

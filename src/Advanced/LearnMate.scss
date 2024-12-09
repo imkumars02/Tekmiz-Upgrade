@@ -1,0 +1,308 @@
+.LearnMate {
+  height: 100vh;
+  width: 100%;
+  background-color: #050509;
+  display: flex;
+  flex-direction: column;
+}
+
+.LearnMateContainer {
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  overflow: hidden;
+  flex-direction: row; // Default to row for desktop
+}
+
+.Container1 {
+  width: 20%;
+  height: 100%;
+  background-color: #0c0c15;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    margin-bottom: 1rem;
+
+    .ContBtn {
+      width: 100%;
+      height: 3.5rem;
+      color: #fff;
+      background-color: #0c0c15;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0rem 0.2rem 0.5rem rgba(255, 255, 255, 0.3);
+    }
+
+    .ContBtn:hover {
+      background: #3c3c3c;
+    }
+  }
+
+  .allChat {
+    flex: 1;
+    margin-top: 1rem;
+    overflow-y: auto;
+
+    .historyBtn {
+      color: #fff;
+      padding: 1rem;
+      font-size: larger;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+
+    .historyBtn:hover {
+      background: #3c3c3c;
+    }
+  }
+
+  .setting {
+    height: 19%;
+    border-top: 1px solid #fff;
+    margin-top: 1rem;
+    overflow-y: auto;
+
+    .allChats {
+      .historyBtn {
+        margin-top: 1rem;
+        color: #fff;
+        padding: 1rem;
+        font-size: larger;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+
+      .historyBtn:hover {
+        background: #3c3c3c;
+      }
+    }
+  }
+}
+
+.Container2 {
+  width: 80%;
+  height: 100%;
+  background-color: #12121b;
+  display: flex;
+  flex-direction: column;
+
+  .OutputMessage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 1.5rem;
+    overflow-y: auto;
+
+    .OutputContainer {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      color: #fff;
+      font-size: medium;
+      display: flex;
+      align-items: flex-start;
+
+      &.user {
+        justify-content: flex-end;
+      }
+
+      &.assistant {
+        justify-content: flex-start;
+        background-color: #33394e;
+      }
+
+      span {
+        display: flex;
+        background-color: #5858b6;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4rem;
+        margin-right: 0.5rem;
+      }
+
+      .message {
+        max-width: calc(100% - 4rem);
+        word-wrap: break-word;
+        text-align: start;
+        background-color: transparent;
+        flex: 1;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .InputMessage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    padding: 1rem;
+    background-color: #12121b;
+
+    .InputContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      .MsgBtn {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        position: relative;
+
+        .inputField {
+          width: 100%;
+          height: 5rem;
+          padding: 0.5rem 4rem 0.5rem 1rem;
+          border-radius: 1.5rem;
+          background-color: #090915;
+          color: #fff;
+          font-size: medium;
+          resize: none;
+          overflow-y: auto;
+          box-sizing: border-box;
+        }
+
+        .sentBtn {
+          position: absolute;
+          right: 1rem;
+          font-size: 2rem;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .text {
+        color: #777676;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium-sized screens */
+@media (max-width: 1024px) {
+  .LearnMateContainer {
+    flex-direction: row;
+  }
+
+  .Container1 {
+    width: 30%;
+    height: 100%;
+  }
+
+  .Container2 {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  html{
+    font-size: 40%;
+  }
+  .LearnMateContainer {
+    flex-direction: row;
+  }
+
+  .Container1 {
+    width: 30%;
+    height: 100%;
+  }
+
+  .Container2 {
+    width: 70%;
+    height: 100%;
+  }
+
+  .OutputMessage {
+    padding: 1rem;
+  }
+
+  .OutputContainer span {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .message {
+    font-size: smaller;
+  }
+
+  .InputMessage {
+    height: 25%;
+  }
+
+  .InputContainer .MsgBtn .inputField {
+    height: 4rem;
+    padding-right: 3rem;
+  }
+
+  .InputContainer .MsgBtn .sentBtn {
+    font-size: 1.8rem;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  html{
+    font-size: 35%;
+  }
+  .LearnMateContainer {
+    flex-direction: row;
+  }
+
+  .Container1 {
+    width: 30%;
+    height: 100%;
+  }
+
+  .Container2 {
+    width: 70%;
+    height: 100%;
+  }
+
+  .OutputMessage {
+    padding: 0.5rem;
+  }
+
+  .OutputContainer span {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  .message {
+    font-size: smaller;
+  }
+
+  .InputMessage {
+    height: 30%;
+  }
+
+  .InputContainer .MsgBtn .inputField {
+    height: 3.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .InputContainer .MsgBtn .sentBtn {
+    font-size: 1.6rem;
+  }
+}

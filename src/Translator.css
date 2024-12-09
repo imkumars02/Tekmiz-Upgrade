@@ -1,0 +1,118 @@
+.translator{
+    padding: 3rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 1rem;
+    width: 56.25rem;
+    background-color: var(--light-bg);
+    box-shadow: 0 .125rem 1.25rem rgba(0,0,0,0.3);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.translator_property{
+    border:1px solid #c7c7c783;
+}
+.translator_property .nuv_item{
+    display: flex;
+    width:100%;
+    height:3.125rem;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid #c7c7c7;
+    padding :0 1.25rem;
+}
+
+.translator_property .nuv_item #lang1,#lang2{
+    outline:none;
+    border-style: none;
+    padding: 0.625rem 0;
+    font-size: 1.1rem;
+    font-weight:500;
+    background-color: var(--light-bg);
+    color:#606060;
+    cursor: pointer;
+    transition: all .3s all ease-out;
+}
+.translator_property .nuv_item #lang1:hover,#lang2:hover{
+    color:#111;
+}
+.bx-transfer{
+    font-size:1.375rem;
+    color:#606060;
+    cursor: pointer;
+    transition: all .3s all ease-out;
+}
+.bx-transfer:hover{
+    color:#111;
+}
+
+
+.write_box{
+    display:flex;
+    gap: .5rem;
+    width: 100%;
+    position: relative;
+}
+.write_box .Property_from,.Property_trans{
+    width:100%;
+}
+.write_box textarea{
+    width: 100%;
+    background-color: var(--light-bg);
+    border:none;
+    resize: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 1.25rem;
+    color: var(--black);
+    height:20rem;
+    position: relative;
+}
+.write_box textarea:nth-child(1){
+    border-right:1px solid #c7c7c7;
+}
+.write_box .icons{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:50%;
+    bottom: 0;
+    color: var(--black);
+    padding: .95rem 1.25rem;
+}
+.icons .bx{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    line-height: 2.1575rem;
+    font-size: 1.125rem;
+    color: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: all .3s ease;
+}
+.icons .bx:hover{
+    background: #606060;
+    color:var(--white);
+}
+
+.code_length{
+    font-size:1.125rem;
+    color: #606060;
+}
+.container .start-h1{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color:#f2b5b5;
+    padding: .5rem;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.6);
+}

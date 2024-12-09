@@ -1,0 +1,19 @@
+/* Footer Section CSS Start */
+.footer{
+    position: sticky;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:var(--white);
+    border-top: var(--border);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--black);
+    font-size: 2rem;
+    margin-top: 2rem;
+    z-index:1000;
+}
+.footer span{
+    color:var(--main-color);
+}
+/* Footer Section CSS End */

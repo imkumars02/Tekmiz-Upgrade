@@ -1,0 +1,86 @@
+.playlists{
+   padding: 2rem;
+}
+.playlists .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   align-items: flex-start;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+.playlists .box-container .box{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+   margin-bottom: 2rem;
+   overflow-x:hidden;
+}
+
+.playlists .box-container .box .thumb{
+   height: 20rem;
+   position: relative;
+   margin: 1.5rem 0;
+}
+
+.playlists .box-container .box .flex{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   justify-content: space-between;
+}
+
+.playlists .box-container .box .flex i{
+   font-size: 1.5rem;
+   color: var(--main-color);
+   margin-right:.7rem;
+}
+
+.playlists .box-container .box .flex span{
+   color: var(--light-color);
+   font-size: 1.7rem;
+}
+
+.playlists .box-container .box .thumb img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: .5rem;
+}
+
+.playlists .box-container .box .thumb span{
+   background-color: rgba(0,0,0,.3);
+   color: #fff;
+   border-radius: .5rem;
+   position: absolute;
+   top: 1rem; left: 1rem;
+   padding: .5rem 1.5rem;
+   font-size: 2rem;
+}
+
+.playlists .box-container .box .title{
+   font-size: 2rem;
+   color: var(--black);
+   margin-bottom: 1rem;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow-x:hidden;
+}
+
+.playlists .box-container .box .description{
+   line-height: 2;
+   overflow: hidden;
+   font-size: 1.7rem;
+   color: var(--light-color);
+}
+
+.playlists .box-container .box .description::after{
+   content: '...';
+}
+
+.more-less-btn{
+   cursor: pointer;
+   font-size: 1.5rem;
+   color: red;
+   margin-left: 0.4rem;
+}

@@ -1,0 +1,72 @@
+.Updateform-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:80vh;
+ }
+ 
+ .Updateform-container form{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+ }
+ 
+ .Updateform-container .login{
+    width: 50rem;
+ }
+ 
+ .Updateform-container .register{
+    width: 80rem;
+ }
+ 
+ .Updateform-container form h3{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+    text-transform: capitalize;
+ }
+ 
+ .Updateform-container form p{
+    padding-top: 1rem;
+    font-size: 1.7rem;
+    color: var(--light-color);
+ }
+ 
+ .Updateform-container form p span{
+    color: var(--red);
+ }
+ 
+ .Updateform-container .link{
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+ }
+ 
+ .Updateform-container .link a{
+    color: var(--main-color);
+ }
+ 
+ .Updateform-container .link a:hover{
+    color: var(--black);
+    text-decoration: underline;
+ }
+ 
+ .Updateform-container form .box{
+    width: 100%;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    color: var(--black);
+    padding: 1.4rem;
+    background-color: var(--light-bg);
+ }
+ 
+ .Updateform-container .flex{
+    display: flex;
+    gap: 2rem;
+ }
+ 
+ .Updateform-container .flex .col{
+    flex: 1 1 25rem;
+ }
